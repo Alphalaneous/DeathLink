@@ -5,6 +5,7 @@
 
 #include "BrownAlertDelegate.hpp"
 #include "InputNode.hpp"
+#include "includes.h"
 
 class InputPrompt : public BrownAlertDelegate {
     public:

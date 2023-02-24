@@ -4,6 +4,7 @@
 #define __INPUT_NODE_H
 
 #include <GUI/CCControlExtension/CCScale9Sprite.h>
+#include "includes.h"
 
 class InputNode : public cocos2d::CCNode {
     protected:

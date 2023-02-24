@@ -4,6 +4,7 @@
 #define __BROWN_ALERT_DELEGATE_H
 
 #include <GUI/CCControlExtension/CCScale9Sprite.h>
+#include "includes.h"
 
 class BrownAlertDelegate : public gd::FLAlertLayer {
     protected:

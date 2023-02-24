@@ -1,5 +1,5 @@
 #include "InputNode.hpp"
-
+#include "includes.h"
 
 gd::CCTextInputNode* InputNode::getInputNode() {
     return this->m_pInput;
@@ -37,4 +37,3 @@ InputNode* InputNode::createMulti(float _w, float _h, const char* _phtxt, const 
     CC_SAFE_DELETE(pRet);
     return nullptr;
 }
-
