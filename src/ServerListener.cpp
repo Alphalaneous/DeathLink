@@ -42,9 +42,11 @@ void ServerListener::onConnectionOpened()
 
 void ServerListener::onMessageReceived(string message)
 {
+    gd::PlayLayer* playLayer = gd::GameManager::sharedState()->getPlayLayer();
+
     if (message == "dead") {
-        if (gd::GameManager::sharedState()->getPlayLayer() != nullptr) {
-            gd::GameManager::sharedState()->getPlayLayer()->destroyPlayer(gd::GameManager::sharedState()->getPlayLayer()->m_pPlayer1, nullptr);
+        if (playLayer != nullptr) {
+            playLayer->destroyPlayer(playLayer->m_pPlayer1, nullptr);
         }
     }
 }
