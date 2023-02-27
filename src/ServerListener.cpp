@@ -25,6 +25,10 @@ ServerListener::ServerListener()
     }
 }
 
+ServerListener::~ServerListener() {
+    delete _webSocket;
+}
+
 void ServerListener::sendMessage(std::string msg) {
     this->_webSocket->send(msg);
 }
@@ -46,13 +50,10 @@ void ServerListener::onMessageReceived(string message)
 }
 
 
-
-
 void ServerListener::onConnectionClosed()
 {
     _listener = nullptr;
     this->instance();
-    
 }
 
 void ServerListener::onConnectionError(const cocos2d::extension::WebSocket::ErrorCode& error)
@@ -77,6 +78,7 @@ ServerListener* ServerListener::_listener = nullptr;
 ServerListener* ServerListener::instance() {
 
     if (_listener == nullptr) {
+        delete _listener;
         _listener = new ServerListener();
     }
 

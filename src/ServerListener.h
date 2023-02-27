@@ -19,6 +19,7 @@ public:
 
     static ServerListener* instance();
     ServerListener();
+    ~ServerListener();
     void sendMessage(std::string);
 
 private:
